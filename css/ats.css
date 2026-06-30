@@ -1,0 +1,84 @@
+.ats-hero {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.ats-score-ring {
+  --score: 86%;
+  display: grid;
+  place-items: center;
+  width: 230px;
+  height: 230px;
+  margin: auto;
+  border-radius: 50%;
+  background: conic-gradient(var(--success) 0 var(--score), var(--surface-soft) var(--score) 100%);
+  animation: pulseScore 1.2s ease;
+}
+
+.ats-score-ring span {
+  display: grid;
+  place-items: center;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--heading);
+  font-size: 2.3rem;
+  font-weight: 900;
+}
+
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keyword-list span {
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: var(--secondary-soft);
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.progress-item {
+  display: grid;
+  gap: 8px;
+}
+
+.progress-track {
+  height: 12px;
+  background: var(--surface-soft);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-track span {
+  display: block;
+  height: 100%;
+  width: var(--value);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  animation: growBar 900ms ease;
+}
+
+@keyframes growBar {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes pulseScore {
+  from {
+    transform: scale(0.94);
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 820px) {
+  .ats-hero {
+    grid-template-columns: 1fr;
+  }
+}

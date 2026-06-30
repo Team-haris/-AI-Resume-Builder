@@ -1,0 +1,55 @@
+.template-card {
+  display: grid;
+  gap: 16px;
+}
+
+.template-art {
+  min-height: 250px;
+  border-radius: var(--radius-md);
+  padding: 22px;
+  background: linear-gradient(135deg, var(--surface-soft), var(--primary-soft));
+  border: 1px solid var(--border);
+}
+
+.template-art .bar {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  margin: 10px 0;
+}
+
+.template-art .bar.title {
+  width: 60%;
+  height: 18px;
+  background: var(--primary);
+}
+
+.template-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 480px) {
+  .template-actions {
+    grid-template-columns: 1fr;
+  }
+}

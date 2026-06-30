@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a professional resume with a multi-step form and live preview.">
+  <title>Resume Builder | AI Resume Builder</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/builder.css">
+  <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav class="navbar container"><a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AI Resume Builder</span></a><div class="nav-menu" data-nav-menu><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="ats.html">AI Tools</a><a class="nav-link" href="index.html#pricing">Pricing</a><a class="nav-link" href="index.html#about">About</a></div><div class="nav-actions"><button class="theme-toggle" type="button" data-theme-toggle>Dark</button><a class="btn btn-outline" href="dashboard.html">Dashboard</a><a class="btn btn-primary" href="preview.html">Preview</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button></div></nav></header>
+  <main class="page-main">
+    <section class="container builder-layout">
+      <form class="card" data-resume-form>
+        <span class="eyebrow">Resume Builder</span>
+        <h1>Build your resume</h1>
+        <p>Step <span data-step-label>1 of 8</span></p>
+        <div class="progress-shell"><div class="progress-bar" data-progress></div></div>
+
+        <section class="step-panel active" data-step="personal"><h2>Personal Details</h2><div class="form-group"><label for="fullName">Full Name</label><input class="input" id="fullName" name="fullName"></div><div class="grid grid-2"><div class="form-group"><label for="email">Email</label><input class="input" id="email" name="email" type="email"></div><div class="form-group"><label for="phone">Phone</label><input class="input" id="phone" name="phone" type="tel"></div></div><div class="form-group"><label for="location">Location</label><input class="input" id="location" name="location"></div><div class="form-group"><label for="summary">Professional Summary</label><textarea class="textarea" id="summary" name="summary"></textarea></div></section>
+        <section class="step-panel" data-step="education"><h2>Education</h2><div class="form-group"><label for="degree">Degree</label><input class="input" id="degree" name="degree"></div><div class="form-group"><label for="college">College</label><input class="input" id="college" name="college"></div><div class="grid grid-2"><div class="form-group"><label for="cgpa">CGPA</label><input class="input" id="cgpa" name="cgpa"></div><div class="form-group"><label for="year">Year</label><input class="input" id="year" name="year"></div></div></section>
+        <section class="step-panel" data-step="experience"><h2>Experience</h2><div class="grid grid-2"><div class="form-group"><label for="company">Company</label><input class="input" id="company" name="company"></div><div class="form-group"><label for="role">Role</label><input class="input" id="role" name="role"></div></div><div class="form-group"><label for="experience">Responsibilities</label><textarea class="textarea" id="experience" name="experience"></textarea></div></section>
+        <section class="step-panel" data-step="skills"><h2>Skills</h2><div class="form-group"><label for="skills">Technical Skills</label><textarea class="textarea" id="skills" name="skills" placeholder="React, Node.js, MongoDB"></textarea></div><div class="form-group"><label for="softSkills">Soft Skills</label><input class="input" id="softSkills" name="softSkills"></div></section>
+        <section class="step-panel" data-step="projects"><h2>Projects</h2><div class="form-group"><label for="projectName">Project Name</label><input class="input" id="projectName" name="projectName"></div><div class="form-group"><label for="projectDescription">Project Description</label><textarea class="textarea" id="projectDescription" name="projectDescription"></textarea></div></section>
+        <section class="step-panel" data-step="certificates"><h2>Certificates</h2><div class="form-group"><label for="certificates">Certificates</label><textarea class="textarea" id="certificates" name="certificates"></textarea></div></section>
+        <section class="step-panel" data-step="languages"><h2>Languages</h2><div class="form-group"><label for="languages">Languages</label><input class="input" id="languages" name="languages" placeholder="English, Hindi"></div></section>
+        <section class="step-panel" data-step="interests"><h2>Interests</h2><div class="form-group"><label for="interests">Interests</label><input class="input" id="interests" name="interests" placeholder="Coding, Reading"></div></section>
+
+        <div class="builder-controls"><button class="btn btn-outline" type="button" data-prev>Previous</button><button class="btn btn-primary" type="button" data-next>Next</button></div>
+      </form>
+      <aside class="preview-sticky"><article class="resume-preview" data-live-preview data-print-area></article></aside>
+    </section>
+  </main>
+</body>
+</html>

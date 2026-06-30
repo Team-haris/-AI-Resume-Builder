@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Resume Builder dashboard with resume statistics, recent resumes, and quick actions.">
+  <title>Dashboard | AI Resume Builder</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav class="navbar container"><a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AI Resume Builder</span></a><div class="nav-menu" data-nav-menu><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="ats.html">AI Tools</a><a class="nav-link" href="index.html#pricing">Pricing</a><a class="nav-link" href="index.html#about">About</a></div><div class="nav-actions"><button class="theme-toggle" type="button" data-theme-toggle>Dark</button><a class="btn btn-outline" href="login.html">Login</a><a class="btn btn-primary" href="builder.html">Get Started</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button></div></nav></header>
+  <main class="page-main">
+    <div class="container app-layout">
+      <aside class="sidebar card" aria-label="Dashboard navigation"><a class="sidebar-link active" href="dashboard.html">Dashboard</a><a class="sidebar-link" href="builder.html">Create Resume</a><a class="sidebar-link" href="templates.html">Templates</a><a class="sidebar-link" href="ats.html">ATS Score</a><a class="sidebar-link" href="profile.html">Profile</a></aside>
+      <section class="dashboard-main">
+        <article class="card welcome-card"><div><span class="eyebrow" style="color:#fff">Dashboard</span><h1>Welcome back, Haris</h1><p>Track your resumes, improve ATS scores, and keep building momentum.</p></div><a class="btn btn-outline" href="builder.html">Create Resume</a></article>
+        <div class="grid grid-4"><article class="card stat-card"><span>Total Resumes</span><strong>12</strong></article><article class="card stat-card"><span>ATS Average</span><strong>86%</strong></article><article class="card stat-card"><span>Downloaded</span><strong>28</strong></article><article class="card stat-card"><span>Templates Used</span><strong>6</strong></article></div>
+        <div class="grid grid-2">
+          <article class="card"><h2>Recently Edited</h2><div class="resume-list"><div class="resume-row"><div><strong>Frontend Developer Resume</strong><p>Edited today</p></div><a class="btn btn-outline" href="builder.html">Edit</a></div><div class="resume-row"><div><strong>Internship Resume</strong><p>Edited yesterday</p></div><a class="btn btn-outline" href="builder.html">Edit</a></div><div class="resume-row"><div><strong>MERN Stack Resume</strong><p>Edited 3 days ago</p></div><a class="btn btn-outline" href="builder.html">Edit</a></div></div></article>
+          <article class="card"><h2>Resume Analytics</h2><div data-analytics></div></article>
+        </div>
+        <article class="card"><h2>Quick Actions</h2><div class="quick-actions"><a class="btn btn-primary" href="builder.html">New Resume</a><a class="btn btn-outline" href="ats.html">Run ATS Check</a><a class="btn btn-outline" href="templates.html">Browse Templates</a><a class="btn btn-outline" href="preview.html">Preview Resume</a></div></article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

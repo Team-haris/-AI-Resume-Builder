@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to AI Resume Builder and continue editing your resume drafts.">
+  <title>Login | AI Resume Builder</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav class="navbar container" aria-label="Primary navigation"><a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AI Resume Builder</span></a><div class="nav-menu" data-nav-menu><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="ats.html">AI Tools</a><a class="nav-link" href="index.html#pricing">Pricing</a><a class="nav-link" href="index.html#about">About</a></div><div class="nav-actions"><button class="theme-toggle" type="button" data-theme-toggle>Dark</button><a class="btn btn-outline" href="login.html">Login</a><a class="btn btn-primary" href="signup.html">Get Started</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button></div></nav></header>
+  <main class="page-main">
+    <section class="auth-shell container">
+      <form class="card auth-card" data-login-form novalidate>
+        <span class="eyebrow">Welcome back</span>
+        <h1>Login</h1>
+        <p>Continue building and improving your resumes.</p>
+        <div class="form-group"><label for="email">Email</label><input class="input" id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="form-group"><label for="password">Password</label><div class="password-field"><input class="input" id="password" name="password" type="password" autocomplete="current-password" required><button class="password-toggle" type="button" data-password-toggle>Show</button></div></div>
+        <div class="form-row"><label><input type="checkbox" name="remember"> Remember me</label><a class="nav-link" href="#">Forgot password?</a></div>
+        <button class="btn btn-primary" type="submit">Login</button>
+        <div class="social-grid section-sm" style="padding-bottom:0"><button class="btn btn-outline" type="button">Google</button><button class="btn btn-outline" type="button">LinkedIn</button></div>
+        <p class="text-center">New here? <a class="nav-link" href="signup.html">Create an account</a></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
