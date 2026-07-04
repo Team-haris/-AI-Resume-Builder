@@ -10,15 +10,51 @@
   <script type="module" src="js/app.js" defer></script>
 </head>
 <body>
-  <header class="site-header"><nav class="navbar container"><a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AI Resume Builder</span></a><div class="nav-menu" data-nav-menu><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="ats.html">AI Tools</a><a class="nav-link" href="index.html#pricing">Pricing</a><a class="nav-link" href="index.html#about">About</a></div><div class="nav-actions"><button class="theme-toggle" type="button" data-theme-toggle>Dark</button><a class="btn btn-outline" href="login.html">Login</a><a class="btn btn-primary" href="builder.html">Get Started</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button></div></nav></header>
+  <header class="site-header"><nav class="navbar container"><a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AI Resume Builder</span></a><div class="nav-menu" data-nav-menu><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="ats.html">AI Tools</a><a class="nav-link" href="index.html#pricing">Pricing</a><a class="nav-link" href="index.html#about">About</a></div><div class="nav-actions"><button class="theme-toggle" type="button" data-theme-toggle>Dark</button><a class="btn btn-outline" href="dashboard.html">Dashboard</a><a class="btn btn-primary" href="builder.html">Get Started</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button></div></nav></header>
   <main class="page-main">
     <section class="container section">
-      <div class="card ats-hero"><div class="ats-score-ring" data-ats-ring data-score="86"><span>86%</span></div><div><span class="eyebrow">ATS Score</span><h1>Resume Health Status: Strong</h1><p>Your resume has good structure, clear skills, and useful keywords. Improve missing role-specific keywords to reach 90%+.</p><a class="btn btn-primary" href="builder.html">Improve Resume</a></div></div>
-      <div class="grid grid-2 section-sm">
-        <article class="card"><h2>Strengths</h2><div class="progress-item"><strong>Formatting</strong><div class="progress-track"><span style="--value:92%"></span></div></div><div class="progress-item"><strong>Readability</strong><div class="progress-track"><span style="--value:88%"></span></div></div></article>
-        <article class="card"><h2>Weaknesses</h2><div class="progress-item"><strong>Quantified achievements</strong><div class="progress-track"><span style="--value:56%"></span></div></div><div class="progress-item"><strong>Keyword match</strong><div class="progress-track"><span style="--value:68%"></span></div></div></article>
-        <article class="card"><h2>Missing Keywords</h2><div class="keyword-list"><span>REST APIs</span><span>Agile</span><span>Testing</span><span>Deployment</span><span>Performance</span></div></article>
-        <article class="card"><h2>Suggestions</h2><ul><li>Add measurable outcomes to project bullets.</li><li>Mention deployment tools and version control.</li><li>Include role-specific keywords from the job description.</li></ul></article>
+      <!-- Resume Selector -->
+      <div id="resume-selector-container" style="margin-bottom: 25px; display: none; align-items: center; gap: 12px;">
+        <label for="resume-select" style="font-weight: 600; font-size: 1.05rem;">Select Resume:</label>
+        <select id="resume-select" class="input" style="max-width: 320px; border-radius: 10px; cursor: pointer;"></select>
+      </div>
+
+      <!-- Main ATS Hero -->
+      <div class="card ats-hero" data-ats-hero-card>
+        <div class="ats-score-ring" data-ats-ring data-score="0"><span>--%</span></div>
+        <div data-ats-header-info>
+          <span class="eyebrow">ATS Score</span>
+          <h1>Resume Health Status: Loading</h1>
+          <p>Please select or build a resume to begin your AI-powered ATS scan.</p>
+          <a class="btn btn-primary" href="builder.html">Improve Resume</a>
+        </div>
+      </div>
+
+      <!-- ATS Detailed Cards -->
+      <div class="grid grid-2 section-sm" id="ats-details-grid" style="display: none;">
+        <article class="card" data-strengths-card>
+          <h2>Strengths</h2>
+          <div class="strengths-list" style="display: flex; flex-direction: column; gap: 10px;"></div>
+        </article>
+        <article class="card" data-weaknesses-card>
+          <h2>Weaknesses</h2>
+          <div class="weaknesses-list" style="display: flex; flex-direction: column; gap: 10px;"></div>
+        </article>
+        <article class="card" data-missing-keywords-card>
+          <h2>Missing Keywords</h2>
+          <div class="keyword-list"></div>
+        </article>
+        <article class="card" data-suggestions-card>
+          <h2>Suggestions & Checklist</h2>
+          <ul class="suggestions-list" style="padding-left: 20px; line-height: 1.6;"></ul>
+        </article>
+      </div>
+
+      <!-- No Resume State -->
+      <div id="no-resumes-state" class="card" style="display: none; text-align: center; padding: 40px 20px;">
+        <h2>No Resumes Found</h2>
+        <p class="muted" style="margin-bottom: 20px;">You need to create a resume first in the builder to calculate its ATS score.</p>
+        <a class="btn btn-primary" href="builder.html">Create Resume Now</a>
       </div>
     </section>
   </main>
